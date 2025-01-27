@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map View</title>
+    <link rel="icon" href="media/Logo.jpg" type="image/jpeg">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <link rel="stylesheet" href="normalUser.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: white;
+            font-family: Arial, sans-serif;
+        }
+        .back-icon{
+            height: 10vh; 
+            aspect-ratio: 1/1;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <!-- Back button in Top Left -->
+        <a href="index.html">
+            <img src="media/back_arrow_icon.png" class="back-icon">
+        </a>
+        <span class="title" style="z-index: 2;">Directions</span>
+    </div>
+
+    <div id="map"></div>
+
+
+        
+    <!-- Bottom Bar -->
+    <div class="bottom-bar">
+        <!-- Bottom Bar Button -->
+        <a href="ExpertReports.html" style="text-decoration: none;">
+            <div class="bottom-bar-button">
+                <span>Next</span>
+            </div>
+        </a>
+    </div>
+
+
+    <script>
+        // Initialize the map
+        var map = L.map("map").setView([45.548821, 13.727583], 17);
+
+        L.tileLayer("https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=JzzGYautmOGS1jAx20F7", {
+            attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+        }).addTo(map);
+
+        // Add markers and polyline
+        const start = [45.5490077290966, 13.727629546356725];
+        const dest = JSON.parse(localStorage.getItem("dest"));
+
+        L.marker(start).addTo(map);
+        L.marker(dest).addTo(map);
+
+        const polyline = L.polyline([start, dest]).addTo(map);
+        map.fitBounds(polyline.getBounds());
+
+    </script>
+</body>
+</html>

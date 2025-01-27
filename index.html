@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrackAlert</title>
+    <link rel="icon" href="media/Logo.jpg" type="image/jpeg">
+
+</head>
+<body>
+        <div style="width: 100%; height: 100%; position: relative; background: rgb(255, 255, 255);">
+            <!-- Header Section -->
+            <div style="width: 393px; height: 73px; left: 0px; top: 0px; position: absolute; background: #5388EA"></div>
+            <div style="left: 60px; top: 11px; position: absolute; color: #FFD900; font-size: 40px; font-family: Kavoon; font-weight: 400; word-wrap: break-word">
+                Expert username
+            </div>
+
+            <!-- Rows Section -->
+            <!-- Row 1 -->
+            
+            <div onclick="handleMap(45.54655081065811, 13.731408514800535)">
+                <div style="width: 393px; height: 65px; left: 0px; top: 86px; position: absolute; background: #D9D9D9"></div>
+                <div style="left: 11px; top: 98px; position: absolute; color: black; font-size: 32px; font-family: Kavoon; font-weight: 400; word-wrap: break-word">
+                    Centar mladih
+                </div>
+                <div style="width: 72px; height: 65px; left: 252px; top: 86px; position: absolute; background: #D1A1A1"></div>
+                <div style="left: 263px; top: 103px; position: absolute; color: black; font-size: 24px; font-family: Kavoon; font-weight: 400; word-wrap: break-word">
+                    1km
+                </div>
+                <div style="width: 72px; height: 65px; left: 324px; top: 86px; position: absolute; background: #7F7676"></div>
+                <div style="left: 343px; top: 103px; position: absolute; color: #8C0B0B; font-size: 24px; font-family: Kavoon; font-weight: 400; word-wrap: break-word">
+                    !25
+                </div>
+            </div>
+
+                <!-- Row 2 -->
+            <div onclick="handleMap(45.54803393342333, 13.725466992053365)">
+                <div style="width: 393px; height: 65px; left: 0px; top: 164px; position: absolute; background: #D9D9D9"></div>
+                <div style="left: 12px; top: 176px; position: absolute; color: black; font-size: 32px; font-family: Kavoon; font-weight: 400; word-wrap: break-word">
+                    Taverna
+                </div>
+                <div style="width: 72px; height: 65px; left: 252px; top: 164px; position: absolute; background: #D1A1A1"></div>
+                <div style="left: 253px; top: 181px; position: absolute; color: black; font-size: 24px; font-family: Kavoon; font-weight: 400; word-wrap: break-word">
+                    1.5km
+                </div>
+                <div style="width: 72px; height: 65px; left: 324px; top: 164px; position: absolute; background: #7F7676"></div>
+                <div style="left: 343px; top: 181px; position: absolute; color: #8C0B0B; font-size: 24px; font-family: Kavoon; font-weight: 400; word-wrap: break-word">
+                    !10
+                </div>
+            </div>
+                
+            <!-- Row 3 -->
+            <div onclick="handleMap(45.542204471402606, 13.675846309247317)">
+                <div style="width: 393px; height: 65px; left: 0px; top: 242px; position: absolute; background: #D9D9D9"></div>
+                <div style="left: 11px; top: 255px; position: absolute; color: black; font-size: 32px; font-family: Kavoon; font-weight: 400; word-wrap: break-word">
+                    Canava house
+                </div>
+                <div style="width: 72px; height: 65px; left: 252px; top: 242px; position: absolute; background: #D1A1A1"></div>
+                <div style="left: 263px; top: 260px; position: absolute; color: black; font-size: 24px; font-family: Kavoon; font-weight: 400; word-wrap: break-word">
+                    7km
+                </div>
+                <div style="width: 72px; height: 65px; left: 324px; top: 242px; position: absolute; background: #7F7676"></div>
+                <div style="left: 346px; top: 260px; position: absolute; color: #8C0B0B; font-size: 24px; font-family: Kavoon; font-weight: 400; word-wrap: break-word">
+                    !6
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        function handleMap(lat, lng){
+            dest = [lat, lng];
+            localStorage.setItem("dest", JSON.stringify(dest));
+            window.location.href = "ExpertMap.html";
+        }
+    </script>
+</body>
+</html>
