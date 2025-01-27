@@ -1,4 +1,4 @@
-# Crack Alert - Expert
+# Crack Alert
 
 ## Simple Overview
 
@@ -27,8 +27,11 @@ The app was created to raise public awareness and facilitate collective efforts 
 
 
 ### Executing Program
-To run Crack Alert open this link:
+To run Crack Alert regular user open this link:
 https://crack-alert.vercel.app
+
+To run Crack Alert expert user open this link:
+https://crack-alert-expert.vercel.app
 
 
 ## Authors
