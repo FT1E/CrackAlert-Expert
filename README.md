@@ -1,5 +1,8 @@
 # Crack Alert
 
+## Link to the youtube video
+https://youtube.com/shorts/NnJGEuk95tI?si=RVeUIDUwMrO7JzY8
+
 ## Simple Overview
 
 Crack Alert is an application designed to identify, report, and monitor unstable buildings to enhance community safety and prevent structural collapse incidents. Inspired by a tragedy in Novi Sad, Serbia, Crack Alert aims to empower both everyday users and experts to address building safety proactively.
